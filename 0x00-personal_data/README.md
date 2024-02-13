@@ -34,6 +34,7 @@ To successfully navigate through this project, make sure to read or watch the fo
 2. **Log formatter**
 
    - **Task:** Copy the given code into `filtered_logger.py`. Update the class to accept a list of strings `fields` as a constructor argument. Implement the `format` method to filter values in incoming log records using `filter_datum`.
+     > For the user data refer to [user_data.csv](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2019/11/a2e00974ce6b41460425.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240213%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240213T230709Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=37deb17bb6c148bb3ecae2f8359d2711950fd06e33d7057f1fbe90bbf1de9b36)
    - **File:** [filtered_logger.py](./filtered_logger.py)
 
 3. **Create logger**
