@@ -72,7 +72,18 @@ def get_logger() -> logging.Logger:
 
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
-    """get the PII fields from the database"""
+    """
+    Establishes a connection to the MySQL database using environment variables.
+
+    The function uses the following environment variables:
+    - PERSONAL_DATA_DB_USERNAME: the username for the database. Defaults to "root" if not set.
+    - PERSONAL_DATA_DB_PASSWORD: the password for the database. Defaults to an empty string if not set.
+    - PERSONAL_DATA_DB_HOST: the host of the database. Defaults to "localhost" if not set.
+    - PERSONAL_DATA_DB_NAME: the name of the database. Must be set.
+
+    Returns:
+        A MySQLConnection object that represents the database connection.
+    """
     user = os.getenv("PERSONAL_DATA_DB_USERNAME") or "root"
     passwd = os.getenv("PERSONAL_DATA_DB_PASSWORD") or ""
     host = os.getenv("PERSONAL_DATA_DB_HOST") or "localhost"
