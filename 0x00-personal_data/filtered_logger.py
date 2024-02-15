@@ -25,8 +25,7 @@ def filter_datum(
     """
     for field in fields:
         message = re.sub(
-            field + "=.*?" + separator, field + "=" + redaction +
-            separator, message
+            field + "=.*?" + separator, field + "=" + redaction + separator, message
         )
     return message
 
@@ -51,8 +50,7 @@ class RedactingFormatter(logging.Formatter):
             formatted string
         """
         message = super(RedactingFormatter, self).format(record)
-        redacted = filter_datum(self.fields, self.REDACTION,
-                                message, self.SEPARATOR)
+        redacted = filter_datum(self.fields, self.REDACTION, message, self.SEPARATOR)
         return redacted
 
 
@@ -74,7 +72,7 @@ def get_logger() -> logging.Logger:
 
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
-    """ """
+    """get the PII fields from the database"""
     user = os.getenv("PERSONAL_DATA_DB_USERNAME") or "root"
     passwd = os.getenv("PERSONAL_DATA_DB_PASSWORD") or ""
     host = os.getenv("PERSONAL_DATA_DB_HOST") or "localhost"
