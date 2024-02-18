@@ -25,7 +25,8 @@ def filter_datum(
     """
     for field in fields:
         message = re.sub(
-            field + "=.*?" + separator, field + "=" + redaction + separator, message
+            field + "=.*?" + separator, field + "=" +
+            redaction + separator, message
         )
     return message
 
@@ -50,7 +51,8 @@ class RedactingFormatter(logging.Formatter):
             formatted string
         """
         message = super(RedactingFormatter, self).format(record)
-        redacted = filter_datum(self.fields, self.REDACTION, message, self.SEPARATOR)
+        redacted = filter_datum(self.fields, self.
+                                REDACTION, message, self.SEPARATOR)
         return redacted
 
 
@@ -76,9 +78,13 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
     Establishes a connection to the MySQL database using environment variables.
 
     The function uses the following environment variables:
-    - PERSONAL_DATA_DB_USERNAME: the username for the database. Defaults to "root" if not set.
-    - PERSONAL_DATA_DB_PASSWORD: the password for the database. Defaults to an empty string if not set.
-    - PERSONAL_DATA_DB_HOST: the host of the database. Defaults to "localhost" if not set.
+    - PERSONAL_DATA_DB_USERNAME: the username for the database.
+    Defaults to "root"
+    if not set.
+    - PERSONAL_DATA_DB_PASSWORD: the password for the database.
+    Defaults to an empty string if not set.
+    - PERSONAL_DATA_DB_HOST: the host of the database. Defaults to "localhost"
+    if not set.
     - PERSONAL_DATA_DB_NAME: the name of the database. Must be set.
 
     Returns:
