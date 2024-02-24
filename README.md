@@ -1,5 +1,7 @@
 <p align="center">
 <img src ="https://th.bing.com/th/id/OIP.VujhOrPpEjmWmCrPP3fyEAHaD4?rs=1&pid=ImgDetMain">
+
+> Manipulate user data in a safe and secure way with Python (Flask)
 </p>
 
 ---
