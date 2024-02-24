@@ -24,86 +24,102 @@
 1. **Task: User model**
 
    - **Description:** Create a SQLAlchemy model named User for a database table named users with specific attributes.
-   - **Files:** [0x03-user_authentication_service/user.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/user.py)
+   - **Files:** [user.py](./user.py)
 
 2. **Task: Create user**
 
    - **Description:** Implement the `add_user` method in the provided DB class to add a user to the database.
-   - **Files:** [0x03-user_authentication_service/db.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/db.py)
+   - **Files:** [db.py](./db.py)
 
 3. **Task: Find user**
 
    - **Description:** Implement the `find_user_by` method in the DB class to find a user based on arbitrary keyword arguments.
-   - **Files:** [0x03-user_authentication_service/db.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/db.py)
+   - **Files:** [db.py](./db.py)
 
 4. **Task: Update user**
 
    - **Description:** Implement the `update_user` method in the DB class to update user attributes.
-   - **Files:** [0x03-user_authentication_service/db.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/db.py)
+   - **Files:** [db.py](./db.py)
 
 5. **Task: Hash password**
 
    - **Description:** Define a `_hash_password` method to hash a password using bcrypt.
-   - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+   - **Files:** [auth.py](./auth.py)
 
 6. **Task: Register user**
 
    - **Description:** Implement the `register_user` method in the Auth class to register a user, hash the password, and save to the database.
-   - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+   - **Files:** [auth.py](./auth.py)
 
 7. **Task: Basic Flask app**
 
    - **Description:** Set up a basic Flask app with a single GET route ("/") returning a JSON payload.
-   - **Files:** [0x03-user_authentication_service/app.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/app.py)
+   - **Files:** [app.py](./app.py)
 
 8. **Task: Register user (endpoint)**
 
    - **Description:** Implement the endpoint to register a user (POST /users) with error handling for existing users.
-   - **Files:** [0x03-user_authentication_service/app.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/app.py)
+   - **Files:** [app.py](./app.py)
 
 9. **Task: Credentials validation**
 
    - **Description:** Implement the `valid_login` method in the Auth class to validate user credentials.
-   - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+   - **Files:** [auth.py](./auth.py)
 
 10. **Task: Generate UUIDs**
 
     - **Description:** Implement a `_generate_uuid` function in the auth module to generate a UUID string.
-    - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+    - **Files:** [auth.py](./auth.py)
 
 11. **Task: Get session ID**
 
     - **Description:** Implement the `create_session` method in the Auth class to create a session for a user.
-    - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+    - **Files:** [auth.py](./auth.py)
 
 12. **Task: Log in**
 
     - **Description:** Implement a login function to respond to the POST /sessions route, handling login and session creation.
-    - **Files:** [0x03-user_authentication_service/app.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/app.py)
+    - **Files:** [app.py](./app.py)
 
 13. **Task: Find user by session ID**
 
     - **Description:** Implement the `get_user_from_session_id` method in the Auth class to find a user based on session ID.
-    - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+    - **Files:** [auth.py](./auth.py)
 
 14. **Task: Destroy session**
 
     - **Description:** Implement the `destroy_session` method in the Auth class to update a user's session ID to None.
-    - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+    - **Files:** [auth.py](./auth.py)
 
 15. **Task: Log out**
 
     - **Description:** Implement a logout function to respond to the DELETE /sessions route, handling session destruction.
-    - **Files:** [0x03-user_authentication_service/app.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/app.py)
+    - **Files:** [app.py](./app.py)
 
 16. **Task: User profile**
 
     - **Description:** Implement a profile function to respond to the GET /profile route, providing user information based on the session ID.
-    - **Files:** [0x03-user_authentication_service/app.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/app.py)
+    - **Files:** [app.py](./app.py)
 
 17. **Task: Generate reset password token**
     - **Description:** Implement the `get_reset_password_token` method in the Auth class to generate a reset password token.
-    - **Files:** [0x03-user_authentication_service/auth.py](https://github.com/<username>/alx-backend-user-data/blob/main/0x03-user_authentication_service/auth.py)
+    - **Files:** [auth.py](./auth.py)
+
+18. **Task: Update password**
+    - **Description:** Modify the Auth class to include the `update_password` method, enabling users to update their password. Ensure the method securely handles the password update process.
+    - **Files:** [auth.py](./auth.py)
+
+19. **Task: Update password end-point**
+    - **Description:** Extend the authentication API by implementing an endpoint for updating user passwords. Utilize the `update_password` method from the Auth class to handle password updates securely.
+    - **Files:** [auth.py](./auth.py) and [routes.py](.routes.py)
+
+---
+
+> ## Advanced Task
+
+20. **Task: End-to-end integration test**
+    - **Description:** Create end-to-end integration tests for the user authentication service. Develop a test suite that covers various scenarios, including user registration, login, session creation, password updates, and logout. Ensure the tests simulate real-world user interactions and validate the correct functioning of the implemented features.
+    - **Files:** [./test_integration.py](./test_integration.py)
 
 ---
 
