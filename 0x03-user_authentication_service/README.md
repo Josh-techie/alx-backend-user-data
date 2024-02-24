@@ -119,7 +119,7 @@
 
 20. **Task: End-to-end integration test**
     - **Description:** Create end-to-end integration tests for the user authentication service. Develop a test suite that covers various scenarios, including user registration, login, session creation, password updates, and logout. Ensure the tests simulate real-world user interactions and validate the correct functioning of the implemented features.
-    - **Files:** [./test_integration.py](./test_integration.py)
+    - **Files:** [main.py](./main.py)
 
 ---
 
