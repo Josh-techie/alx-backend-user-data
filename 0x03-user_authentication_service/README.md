@@ -78,7 +78,7 @@
 
 12. **Task: Log in**
 
-    - **Description:** Implement a login function to respond to the POST /sessions route, handling login and session creation.
+    - **Description:** Implement a login function to respond to the POST `/sessions` route, handling login and session creation.
     - **Files:** [app.py](./app.py)
 
 13. **Task: Find user by session ID**
